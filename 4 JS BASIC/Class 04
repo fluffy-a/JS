@@ -1,0 +1,223 @@
+
+//Task 0: Create an array
+function createArray(number) {
+    let array = [];
+    for(let i=1;i<=number;i++){
+        array.push(i);
+    }
+console.log(array);
+}
+createArray(5);
+
+//Task 1: Return the First Element in an Array
+
+let arr=[1,2,3,4,5,6];
+
+function getFirstElement(){
+    
+    return arr.shift();
+}
+console.log(arr.shift());
+
+//Task 2: Reverse an Array
+function reverseArray(array){
+    let reversedArray=[];
+    for(let i=array.length-1;i>=0 ;i--){
+        let x= array[i];
+        reversedArray.push(x);
+    }
+    console.log(reversedArray);
+    return reversedArray;
+}
+reverseArray([1,2,3,4,5]);
+
+//Task 3: Find the Index
+// function indexOf(element){
+//     for(let i=0; i>=0; i++){
+//        if(element ===array){
+//            return element;
+           
+//        }
+
+//     return -1;
+// }
+// }
+// let array=[1,2,3,4,5];
+// console.log(array.indexOf(5));
+
+
+
+function indexOf(array,element){
+    for(let i=0;i<array.length;i++){
+        index=i;
+        if(element===array[i]){
+            break;
+
+        }else
+         {index= -1;
+    }
+
+}return index;
+}
+
+console.log(indexOf([1,2,3,4], 3));
+
+
+
+
+// Task 4: Check if an Array Contains a Given Number
+// function check(array,number){
+//     let condition;
+//     for(let i=0;i<array.length;i++){
+//         condition=true;
+//         if(number===array[i]){
+//            break
+//         }else { condition= false;
+//     }
+
+//     }return condition;
+// }
+
+// console.log(check([1,2,3,4], 5));
+
+function checkNumber(array,number){
+        for(let i=0; i<array.length; i++){
+            if(array[i]===number){
+                return true;
+            }
+        }
+            return false;
+    
+    }
+    let array=[1,2,3,4,5];
+    console.log(checkNumber(array, 6));
+
+    //Task 5: Negate the Array of Numbers
+    
+   
+    function negate(array){
+        let negateArray=[];
+    for(i=0;i<array.length;i++){
+        let negatedNum=array[i]*-1;
+        negateArray.push(negatedNum)
+    }
+    console.log(negateArray);
+    }
+negate([1,2,3,4])
+
+
+//Task 6: Difference of Max and Min Numbers in Array
+
+function diffMinMax(array){
+    let max=-Infinity;
+    let min=Infinity;
+    for(let i=0;i<array.length;i++){
+        if(max<array[i]){
+            max=array[i];
+        }
+    }
+    for(let i=0;i<array.length;i++){
+        if(min>array[i]){
+         min=array[i];
+}
+    }
+    let diff=max-min;
+        return diff;
+}
+diffMinMax([10, 4, 1, 4, -10, -50, 32, 21]) 
+
+
+
+
+//Task 7: Multiply by Length
+
+function Multiply(array){
+    let arrayMultiply=[];
+    for(let item of array){
+      let multinumber= item*array.length;
+      arrayMultiply.push(multinumber);
+    }
+    return arrayMultiply
+}
+console.log(Multiply([2, 3, 1, 0]));
+
+//Task 8: Hurdle Jump
+function hurdleJump(array,number){
+    for(let item of array){
+        if(number<item){
+        return false;
+}
+
+    }return true;
+}
+
+console.log(hurdleJump([1, 2, 3, 4, 5], 5))
+
+//Task 9: Generate a Countdown of Numbers in an Array
+
+function countdown(number){
+    let array=[];
+    for(i=number;i>=0;i--){
+    array.push(i)
+}
+console.log(array)
+}
+
+(countdown(5))
+
+//Task 10: Odd Up, Even Down
+function transform(array){
+    for(let i=0;i<array.length;i++){
+        if(array[i]%2===0){
+        array[i]=array[i]-1;
+    
+    } else {
+        array[i]=array[i]+1;
+    
+    }
+}return array;
+}
+console.log(transform([1,2,3,4,5]));
+
+
+
+
+//Homework
+function sumMinMax(array){
+    for(let i=0;i<array.length;i++){
+        let min=array[i]
+        let max=array[i]
+        if(typeof(array[i])!=="number"){
+            continue;
+        }
+
+        for(let i=0;i<array.length;i++){
+            if (array[i] > max) {
+                max = array[i];
+        }
+    }
+        for(let i=0;i<array.length;i++){
+            if (array[i] < min) {
+                min = array[i];
+}
+    }
+    let sum=max+min;
+        return sum;
+}
+console.log(`Max: ${max}, Min: ${min}, Sum: ${max+min}`)
+return min + max;
+}
+
+
+
+//Homework 2
+function fullNames(arr1, arr2) {
+    let newArray = [];
+    let i = 0;
+        while (i < arr1.length) {
+        newArray.push(`${i+1}.${arr1[i]} ${arr2[i]}`);
+        i++; 
+        } 
+    console.log(newArray);
+    return newArray;
+}    
