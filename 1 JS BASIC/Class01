@@ -1,0 +1,14 @@
+
+Math.PI
+let r=12
+let pi=Math.PI
+let area= r*r*pi;
+console.log(area);
+
+let numberOfPhones=30;
+let priceOfPhone=119.95;
+let taxRate=0.05;
+
+let priceOfPhoneWithtaxRate= priceOfPhone*taxRate + priceOfPhone;
+let priceOfAllPhone= priceOfPhoneWithtaxRate * numberOfPhones;
+alert (priceOfAllPhone);
