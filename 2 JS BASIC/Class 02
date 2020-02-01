@@ -1,0 +1,26 @@
+
+let number1=10;
+let number2=5;
+let number3=4;
+let result= (10+5+4  / 3)
+if (result<0){
+    alert("Negative NUmber");
+}
+else if (result=NaN){
+    alert("Not a number")
+}else{
+    alert("OKEY");
+
+}
+
+HOMEWORK Part 2
+Write a javascript program for making an order for:
+Coffee - 2$
+Juice - 3$
+Water - 1$
+Beer - 4$
+Wine - 5$
+Whisky - 10$
+You can order multiple drinks but only one type
+There should be a reciept with the type and quantity of the drink and the total price
+Ex: Type: Coffee, Quantity: 5, Total: 10$
