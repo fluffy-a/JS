@@ -1,0 +1,14 @@
+
+//Change the text of all paragraphs and headers with javascript
+//selectors
+let firstparagraph=document.querySelector("p");
+let secondparagraph=document.querySelectorAll("p")[1];
+let firstheader=document.getElementById("myTitle");
+let secondheader=document.querySelectorAll("h1")[1];
+let thirdheader=document.querySelector("h3");
+
+firstparagraph.innerText='Hi, Im First paragraph' //da
+secondparagraph.innerText='Hi,Im Second paragraph'//da
+firstheader.innerText='Hi,Im First Header' //da
+secondheader.innerText='Hi Im second header'//da
+thirdheader.innerText='Hi Im third header' //da
