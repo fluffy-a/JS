@@ -1,0 +1,33 @@
+let button=document.getElementById("callBtn")
+$(document).ready(function(){
+     button.addEventListener("click", function(){
+          $.ajax({
+
+          url:" https://swapi.co/api/people/1",
+          success: function(response){
+          console.log("Successful!");
+          // let responseObject = JSON.parse(response);
+          console.log(response);
+
+          let title =document.querySelector('h1');
+          title.innerText=response.name;
+
+          let table = document.querySelector('tbody');
+          table.innerHTML = '';
+          table.innerHTML +=          
+               `<tr>
+                    <td>${response.height}</td>
+                    <td>${response.mass}</td>
+                    <td>${response.hair_color}</td>
+                    <td>${response.eye_color}</td>
+               </tr>`;
+          },
+          error: function (response) {
+          console.log("Request failed: ");
+          console.log(response.responseText);
+           }
+      })
+  })
+});
+
+
