@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrow Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Homework 2</h1>
+    <div id="result">
+        <h1></h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Breed</th>
+                    <th>Hair</th>
+                    <th>Size</th>
+                    <th>Age</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <button id="callBtn">Click me</button>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
