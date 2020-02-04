@@ -1,0 +1,27 @@
+fetch('https://api.myjson.com/bins/q0dj6').then(response => response.json()).then(parsedResponse => {
+
+     let btn = document.getElementById("callBtn");
+     let myTable = document.querySelector('tbody');
+     
+     btn.addEventListener('click', () => {
+          myTable.innerHTML = ""
+
+          for (let dog of parsedResponse) {
+               myTable.innerHTML += `<tr>
+                    <td>${dog.name}</td>
+                    <td>${dog.breed}</td>
+                    <td>${dog.hair}</td>
+                    <td>${dog.size}</td>
+                    <td>${dog.age <= 1 ? dog.age = 'puppy' : dog.age}</td>
+                    <td>${dog.color}</td>
+                </tr>`
+            }
+        })
+
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+
+
+
