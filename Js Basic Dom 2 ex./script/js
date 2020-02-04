@@ -1,0 +1,14 @@
+let array=[1,2,3,4,5]
+
+let list=document.querySelectorAll("div")[2]
+
+list.innerHTML='';
+list.innerHTML+='<ul>';
+for(let i=0;i<array.length;i++){
+    list.innerHTML+=`<li>${array[i]}  </li> `
+
+}
+list.innerHTML+= '</ul>';
+
+
+
